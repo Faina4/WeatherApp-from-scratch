@@ -1,0 +1,7 @@
+.container-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.weather-app {
+  border: 1px solid black;
+}
