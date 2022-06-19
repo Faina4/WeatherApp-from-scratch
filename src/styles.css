@@ -1,14 +1,11 @@
 
 }
-body {
-  font-family: "Patrick Hand", cursive;
+body { 
   padding-top: 35px;
   margin: 10px auto 0;
   padding: 0;
-
   max-width: 900px;
 }
-
 
 h1 {
   font-weight: 600;
@@ -20,10 +17,31 @@ ul {
 li {
   list-style: none;
 }
+.weather-app-wrapper {
+  margin: 30px auto;
+  max-width: 900px;
+}
 .weather-app {
   border: 1px solid #d9d9d9;
-  border-radius: 10px;
-
-  max-width: 900px;
-  margin: 30px auto;
+border-radius: 10px;
   padding: 20px;
+}
+.overview{
+  margin-bottom: 20px;
+}
+.weather-temperature img{
+  margin-right: 10px;
+    height: 60px;
+    width: 60px;
+}
+.weather-temperature strong{
+color: #212529;
+font-size: 50px;
+line-height: 60px;
+font-weight: 600;
+}
+.weather-temperature .units{
+position: relative;
+font-size: 16px;
+top: -28px;
+}

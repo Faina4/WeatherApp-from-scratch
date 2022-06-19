@@ -23,21 +23,29 @@
   </head>
   <body>
     <div class="container">
-      <div class="container-wrapper">
+      <div class="weather-app-wrapper">
         <div class="weather-app">
-          Current Location
-          <h1>Kyiv</h1>
-          <ul>
-            <li>Friday, 09:00</li>
-            <li>Clear</li>
-          </ul>
+          <div class="overview">
+            Current Location
+            <h1>Kyiv</h1>
+            <ul>
+              <li>Friday, 09:00</li>
+              <li>Clear</li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col-6">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="clear"
-              />
-              12 °C | °F
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="clear"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>12</strong
+                  ><small class="units">°C|<a href="#">°F</a></small>
+                </div>
+              </div>
             </div>
             <div class="col-6">
               <ul>
@@ -47,15 +55,15 @@
               </ul>
             </div>
           </div>
-          <small>
-            <a
-              href="https://github.com/Faina4/WeatherApp-from-scratch"
-              target="_blank"
-              >Open-source code</a
-            >
-            by FaIna
-          </small>
         </div>
+        <small>
+          <a
+            href="https://github.com/Faina4/WeatherApp-from-scratch"
+            target="_blank"
+            >Open-source code</a
+          >
+          by FaIna
+        </small>
       </div>
     </div>
     <script src="src/index.js"></script>
