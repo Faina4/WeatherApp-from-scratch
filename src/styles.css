@@ -1,7 +1,18 @@
-.container-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
 .weather-app {
-  border: 1px solid black;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+h1 {
+  font-weight: 600;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
 }
