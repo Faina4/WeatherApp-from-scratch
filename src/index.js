@@ -1,3 +1,26 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let weekDay = weekDays[date.getDay()];
+  return `${weekDay}, ${hours}:${minutes}`;
+}
+
 function displayTemperature(response) {
   console.log(response.data.main);
   let temperatureElement = document.querySelector("#temperature");
@@ -10,6 +33,8 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let weekDayElement = document.querySelector("#weekday");
+  weekDayElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "d08b5ff65675f4663f3c5d9f116c9748";
