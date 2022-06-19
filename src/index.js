@@ -29,7 +29,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let weekDayElement = document.querySelector("#weekday");
-  // let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -37,7 +37,10 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   weekDayElement.innerHTML = formatDate(response.data.dt * 1000);
-  //iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d.png`);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "d08b5ff65675f4663f3c5d9f116c9748";
