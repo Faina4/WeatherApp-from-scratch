@@ -4,11 +4,11 @@ body {
   padding-top: 35px;
   margin: 10px auto 0;
   padding: 0;
-  max-width: 900px;
 }
 
 h1 {
   font-weight: 600;
+  text-transform: capitalize;
 }
 ul {
   margin: 0;
@@ -16,10 +16,11 @@ ul {
 }
 li {
   list-style: none;
+  text-transform: capitalize;
 }
 .weather-app-wrapper {
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 700px;
 }
 .weather-app {
   border: 1px solid #d9d9d9;
@@ -44,4 +45,7 @@ font-weight: 600;
 position: relative;
 font-size: 16px;
 top: -28px;
+}
+.wind-speed{
+  text-transform: lowercase;
 }
