@@ -24,17 +24,20 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
   console.log(response.data.main);
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
   let weekDayElement = document.querySelector("#weekday");
+  // let iconElement = document.querySelector("#icon");
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   weekDayElement.innerHTML = formatDate(response.data.dt * 1000);
+  //iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d.png`);
 }
 
 let apiKey = "d08b5ff65675f4663f3c5d9f116c9748";
