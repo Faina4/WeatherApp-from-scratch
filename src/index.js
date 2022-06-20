@@ -31,7 +31,9 @@ function displayTemperature(response) {
   let weekDayElement = document.querySelector("#weekday");
   let iconElement = document.querySelector("#icon");
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -55,8 +57,19 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLinkElement = document.querySelector("#fahrenheit-link");
+fahrenheitLinkElement.addEventListener("click", displayFahrenheitTemperature);
 
 search("Kyiv");
