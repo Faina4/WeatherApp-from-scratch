@@ -53,9 +53,17 @@ li:first-letter {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  line-height: 30px;
+  
+}
+.col-2{
+   background-color: #f2f2f1;
 }
 .weather-forecast-date {
   font-size: 16px;
-  color: grey;
-  background-color: #f2f2f1;
+  color: #84D1FF;
+  
+}
+.weather-forecast-temperature{
+  font-size: 14px;
 }
