@@ -33,6 +33,11 @@ li:first-letter {
 }
 #search-engine {
   display: block;
+  
+}
+#search-button{
+  display: block;
+
 }
 .weather-temperature img {
   margin-right: 10px;
@@ -64,8 +69,13 @@ li:first-letter {
 }
 .weather-forecast-date {
   font-size: 16px;
-  color: #84D1FF;
+  color: #009CDA;
+  opacity: 0.7;
+ 
   
+}
+.weather-forecast-temperature-night{
+  opacity: 0.5;
 }
 .weather-forecast-temperature{
   font-size: 14px;
