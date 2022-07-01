@@ -55,9 +55,12 @@ li:first-letter {
   text-align: center;
   line-height: 30px;
   
+  
 }
 .col-2{
    background-color: #f2f2f1;
+   
+  
 }
 .weather-forecast-date {
   font-size: 16px;
