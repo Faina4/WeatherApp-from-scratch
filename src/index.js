@@ -20,13 +20,15 @@ function formatDate(timestamp) {
   let weekDay = weekDays[date.getDay()];
   return `${weekDay}, ${hours}:${minutes}`;
 }
-function displayDayForecast(){
-  let dayForecastElement=document.querySelector("#day-forecast");
+function displayDayForecast() {
+  let dayForecastElement = document.querySelector("#day-forecast");
 
-let dayForecastHTML=`<div class="row">`;
-let days=["Sun", "Mon", "Tue", "Wed","Thu","Fri","Sat"]
-days.forEach(function(day){
-  dayForecastHTML= dayForecastHTML +`
+  let dayForecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    dayForecastHTML =
+      dayForecastHTML +
+      `
               <div class="col-2">
                 <div class="weather-forecast-date"> ${day}</div>
                 <div>
@@ -49,14 +51,17 @@ days.forEach(function(day){
                 </div>
               </div>
            
-  `})
+  `;
+  });
 
-  
-dayForecastHTML=dayForecastHTML+`</div>`;
-dayForecastElement.innerHTML=dayForecastHTML;
+  dayForecastHTML = dayForecastHTML + `</div>`;
+  dayForecastElement.innerHTML = dayForecastHTML;
 }
-function getForecast(coordinates){
+function getForecast(coordinates) {
   console.log(coordinates);
+  let apiKey = "d08b5ff65675f4663f3c5d9f116c9748";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}
+  `;
 }
 
 function displayTemperature(response) {
