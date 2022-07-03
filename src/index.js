@@ -17,8 +17,10 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
+ 
   let weekDay = weekDays[date.getDay()];
   return `${weekDay}, ${hours}:${minutes}`;
+ 
 }
 
 function formatDay(timestamp){
@@ -26,12 +28,11 @@ let date=new Date(timestamp*1000);
 let day=date.getDay();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 return days[day];
-
 }
 
 function displayDayForecast(response){
  let forecast = response.data.daily;
-  console.log(response);
+  
   let dayForecastElement=document.querySelector("#day-forecast");
   let dayForecastHTML = `<div class="row">`;
   
@@ -89,6 +90,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let weekDayElement = document.querySelector("#weekday");
+  let actualDateElement=document.querySelector("#actualDate");
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
@@ -119,12 +121,8 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
+
+
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -136,8 +134,6 @@ let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLinkElement = document.querySelector("#fahrenheit-link");
-fahrenheitLinkElement.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLinkElement = document.querySelector("#celsius-link");
 celsiusLinkElement.addEventListener("click", displayCelsiusTemperature);

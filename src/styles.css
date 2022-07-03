@@ -27,9 +27,11 @@ li:first-letter {
   border-radius: 10px;
   padding: 20px;
   background-color: #F8FCDE;
-  
- 
+  }
+.weather-app::first-letter{
+  text-transform: capitalize;
 }
+
 .overview {
   margin-bottom: 20px;
   display: block;
