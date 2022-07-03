@@ -23,7 +23,8 @@ function formatDate(timestamp) {
 
 function displayDayForecast(response){
  let forecast = response.data.daily;
- console.log(response.data);
+ console.log(response.data.daily);
+ console.log(response);
   let dayForecastElement=document.querySelector("#day-forecast");
   let dayForecastHTML = `<div class="row">`;
   //let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -35,7 +36,7 @@ function displayDayForecast(response){
                 <div class="weather-forecast-date"> ${forecastDay.dt}</div>
                 <div>
              <img
-                  src=" http://openweathermap.org/img/wn/${forecast}@2x.png"
+                  src=" http://openweathermap.org/img/wn/${forecast[0].weather[0].icon}@2x.png"
               alt=""
               id="icon"
                 width="36"
