@@ -21,22 +21,28 @@ function formatDate(timestamp) {
   return `${weekDay}, ${hours}:${minutes}`;
 }
 
+function formatDay(day){
+let date=new Date(timestamp);
+
+
+}
+
 function displayDayForecast(response){
  let forecast = response.data.daily;
- console.log(response.data.daily);
- console.log(response);
+  console.log(response);
   let dayForecastElement=document.querySelector("#day-forecast");
   let dayForecastHTML = `<div class="row">`;
   //let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   forecast.forEach(function (forecastDay) {
+    console.log(forecastDay);
     dayForecastHTML =
       dayForecastHTML +
       `
               <div class="col-2">
-                <div class="weather-forecast-date"> ${forecastDay.dt}</div>
+                <div class="weather-forecast-date"> ${formatDay(forecastDay.dt) }</div>
                 <div>
              <img
-                  src=" http://openweathermap.org/img/wn/${forecast[0].weather[0].icon}@2x.png"
+                  src=" http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
               alt=""
               id="icon"
                 width="36"
