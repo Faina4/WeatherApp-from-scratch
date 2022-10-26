@@ -24,74 +24,74 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="weather-app">
-         
-          Current location
-          <div class="overview">
+          <div class="weather-app">
+          
+            Current location
+            <div class="overview">
+              <div class="row">
+                <div class="col-4">
+                  <h1 id="city"></h1>
+                  <ul>
+                    <li id="actualDate"></li>
+                    <li id="weekday"></li>
+                    <li id="description"></li>
+                  </ul>
+                </div>
+              <div class="col-8">
+                <div class="row">
+                  <div class="col-9" id="search-engine">
+                    <form id="search-form" class="border border- light w-200">
+                    <input
+                      type="search"
+                      placeholder="Type a city ..."
+                      class="form-control"
+                      id="city-input"
+                      autocomplete="off"
+                    />
+                    </div>
+                  <div class="col-3">
+                    <input  type="submit" value="Search"class="btn btn-light w-200 "id="search-button" />     
+                  </div>
+                </div>
+                
+                      
+                    </div>
+              
+                  </form>
+                </div>
+              </div>
+          
             <div class="row">
-              <div class="col-4">
-                <h1 id="city"></h1>
+              <div class="col-6">
+                <div class="clearfix weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="clear"
+                    class="float-left"
+                    id="icon"
+                  />
+                  <div class="float-left">
+                    <strong id="temperature"></strong>
+                    <span class="units"><a href="#" id="celsius-link">°C</a> </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
                 <ul>
-                  <li id="actualDate"></li>
-                  <li id="weekday"></li>
-                   <li id="description"></li>
+                  <li>Humidity: <span id="humidity"> </span> %</li>
+                  <li>
+                    Wind: <span id="wind"> </span
+                    ><span class="wind-speed"> km/h</span>
+                  </li>
                 </ul>
               </div>
-             <div class="col-8">
-              <div class="row">
-                <div class="col-9" id="search-engine">
-                   <form id="search-form" class="border border- light w-200">
-                   <input
-                    type="search"
-                    placeholder="Type a city ..."
-                    class="form-control"
-                    id="city-input"
-                    autocomplete="off"
-                  />
-                  </div>
-                <div class="col-3">
-                   <input  type="submit" value="Search"class="btn btn-light w-200 "id="search-button" />     
-                </div>
-              </div>
-               
-                     
-                  </div>
-             
-                </form>
-              </div>
             </div>
-         
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  alt="clear"
-                  class="float-left"
-                  id="icon"
-                />
-                <div class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units"><a href="#" id="celsius-link">°C</a> </span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"> </span> %</li>
-                <li>
-                  Wind: <span id="wind"> </span
-                  ><span class="wind-speed"> km/h</span>
-                </li>
-              </ul>
-            </div>
-          </div>
 
-          
-          <div class="weather-forecast" id="day-forecast" >
             
+            <div class="weather-forecast" id="day-forecast" >
+              
+            </div>
           </div>
-        </div>
         <small>
           <a
             href="https://github.com/Faina4/WeatherApp-from-scratch"
