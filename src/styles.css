@@ -29,8 +29,6 @@ li:first-letter {
   background-color: #F8FCDE;
   }
 
-
-
 #search-engine {
   display: block;
   
@@ -47,10 +45,11 @@ li:first-letter {
   margin-right: 10px;
   height: 60px;
   width: 60px;
+  line-height: 30px;
 }
 .weather-temperature strong {
   color: #212529;
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
 }
